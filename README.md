@@ -36,8 +36,9 @@ npm run dev
 
 # Build production package
 npm run build
-
+```
 ## Backend Configuration
+```yaml
 # application.yml example
 spring:
   datasource:
@@ -50,6 +51,46 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath:mapper/**/*.xml
-#🔌 API Documentation
-## User Registration
+```
 
+## 🔌API Documentation
+### User Registration
+```http
+POST /api/v1/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "testUser",
+  "password": "securePass123",
+  "email": "user@example.com"
+}
+```
+
+## Points Redemption
+```http
+POST /api/v1/points/redeem HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer <jwt_token>
+
+{
+  "userId": 1001,
+  "points": 500,
+  "remark": "Redeem monthly membership card"
+}
+```
+### Tier Inquiry
+``` http
+GET /api/v1/membership/tier?userId=1001 HTTP/1.1
+Accept: application/json
+```
+
+## 📄 System Architecture
+```mermaid
+graph TD
+    A[Frontend Layer] --> B[Nginx Reverse Proxy]
+    B --> C[User Service]
+    B --> D[Points Service]
+    B --> E[Tier Service]
+    C --> F[MySQL Primary DB]
+    D --> G[Redis Cache]
+    E --> H[Elasticsearch]
