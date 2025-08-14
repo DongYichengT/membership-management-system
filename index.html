@@ -6,35 +6,45 @@
     <title>Membership Management System</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        /* 全局样式 */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background: #f5f7fa;
-            color: #333;
+            background: linear-gradient(135deg, #4B0082, #8A2BE2);
+            color: #f0f0f0;
         }
+
+        /* 页头 */
         header {
-            background: #4a90e2;
-            color: white;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5em;
+            font-size: 3em;
+            letter-spacing: 2px;
         }
         header p {
             margin: 10px 0 0;
-            font-size: 1.2em;
+            font-size: 1.3em;
+            opacity: 0.8;
         }
+
+        /* 内容区 */
         section {
             max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
         h2 {
-            color: #4a90e2;
+            color: #E6E6FA;
             margin-bottom: 15px;
+            border-bottom: 2px solid #9370DB;
+            padding-bottom: 5px;
         }
         ul {
             list-style: none;
@@ -43,11 +53,16 @@
         li {
             margin-bottom: 10px;
         }
+
+        /* 视频容器 */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
         .video-container iframe {
             position: absolute;
@@ -57,16 +72,24 @@
             height: 100%;
             border: none;
         }
+
+        /* 链接样式 */
+        a {
+            color: #D8BFD8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* 页脚 */
         footer {
             text-align: center;
             padding: 20px;
-            background: #eee;
+            background: rgba(0,0,0,0.2);
             margin-top: 40px;
             font-size: 0.9em;
-        }
-        a {
-            color: #4a90e2;
-            text-decoration: none;
+            opacity: 0.8;
         }
     </style>
 </head>
@@ -79,14 +102,14 @@
 
 <section>
     <h2>Project Overview</h2>
-    <p>This is a full-stack Membership Management System developed with Spring Boot for backend and Vue.js for frontend. It supports user registration, login, points & level management, permissions, and activity logs. Suitable for small and medium-sized business applications.</p>
+    <p>This full-stack Membership Management System is developed with Spring Boot (backend) and Vue.js (frontend). It supports user registration, login, points & level management, permissions, and activity logs. Designed for small and medium-sized business applications.</p>
 </section>
 
 <section>
     <h2>Features</h2>
     <ul>
-        <li>👤 User Management: Registration, login, and profile updates</li>
-        <li>⭐ Points & Levels: Points accumulation and level evaluation</li>
+        <li>👤 User Management: Registration, login, profile updates</li>
+        <li>⭐ Points & Levels: Points accumulation and membership level evaluation</li>
         <li>🔑 Permission Control: Role- and level-based access control</li>
         <li>📜 Activity Logs: Track user actions</li>
         <li>⚡ High Performance: API average response time &lt; 300ms</li>
@@ -105,7 +128,7 @@
 <section>
     <h2>Demo Video</h2>
     <div class="video-container">
-        <iframe src="https://youtu.be/6FN0aynfXM0D" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/6FN0aynfXM0" allowfullscreen></iframe>
     </div>
 </section>
 
@@ -115,7 +138,7 @@
 </section>
 
 <footer>
-    &copy; 2024 Yicheng Dong. All rights reserved.
+    &copy; 2025 Yicheng Dong. All rights reserved.
 </footer>
 
 </body>
